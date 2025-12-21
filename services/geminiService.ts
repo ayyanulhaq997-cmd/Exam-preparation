@@ -1,7 +1,9 @@
 
 import { GoogleGenAI, GenerateContentResponse, Type } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
+
+
 
 const SYSTEM_INSTRUCTION = `You are the Nexus EDU Assistant, a highly sophisticated AI consultant for the Nexus EDU platform.
 Your goal is to help students, agents, and trainers navigate the platform.
